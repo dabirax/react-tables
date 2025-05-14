@@ -13,7 +13,7 @@ import ColumnHidiing from "./components/ColumnHiding";
 function App() {
   return (
     <div >
-      <ColumnHidiing />
+      <BasicTable />
     </div>
   );
 }

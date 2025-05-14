@@ -5,7 +5,7 @@ import MOCK_DATA from "./MOCK_DATA.json";
 import "./table.css";
 
 const BasicTable = () => {
-  const columns = useMemo(() => GROUPED_COLUMNS, []);
+  const columns = useMemo(() => COLUMNS, []);
   const data = useMemo(() => MOCK_DATA, []);
 
   const tableInstance = useTable({
@@ -23,6 +23,7 @@ const BasicTable = () => {
   } = tableInstance;
 
   return (
+    <>
     <table {...getTableProps()}>
       <thead>
         {headerGroups.map((headerGroup) => (
@@ -55,6 +56,7 @@ const BasicTable = () => {
         ))}
       </tfoot>
     </table>
+    </>
   );
 };
 
